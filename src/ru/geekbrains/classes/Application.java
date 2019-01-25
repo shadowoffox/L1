@@ -35,5 +35,10 @@ public class Application {
         }
        // Team team = new Team();
        // System.out.println(team.YourTeam[0]);/
+
+        Team team = new Team(participants);
+        Course course = new Course(obstacles);
+        course.doIt();
+
     }
 }
