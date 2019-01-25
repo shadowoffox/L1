@@ -13,9 +13,19 @@ public  class Course extends Obstacle {
         this.YourSource = obstacles;
 
         }
-    @Override
-    public void doIt(Participant team){
 
+    public Obstacle[] getYourSource() {
+        return YourSource;
+    }
+
+    @Override
+    public void doIt(Team team){
+
+        for (Participant t:team.getYourTeam()){
+             for (Obstacle c:getYourSource()){
+
+             }
+         }
      }
 }
 

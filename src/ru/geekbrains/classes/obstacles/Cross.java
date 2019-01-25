@@ -1,6 +1,7 @@
 package ru.geekbrains.classes.obstacles;
 
 import ru.geekbrains.classes.Participant;
+import ru.geekbrains.classes.Team;
 import ru.geekbrains.classes.animals.Animal;
 
 public class Cross extends Obstacle {
@@ -12,7 +13,8 @@ public class Cross extends Obstacle {
     }
 
     @Override
-    public void doIt(Participant animal) {
-        animal.run(length);
+    public void doIt(Team animal) { animal.getYourTeam().run(length);
     }
+
+
 }

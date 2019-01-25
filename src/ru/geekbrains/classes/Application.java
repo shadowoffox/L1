@@ -38,7 +38,7 @@ public class Application {
 
         Team team = new Team(participants);
         Course course = new Course(obstacles);
-        course.doIt();
+        course.doIt(team);
 
     }
 }

@@ -18,7 +18,9 @@ public class Team  {
         this.YourTeam = participants;
     }
 
-
+    public Participant[] getYourTeam() {
+        return YourTeam;
+    }
 }
 
 
