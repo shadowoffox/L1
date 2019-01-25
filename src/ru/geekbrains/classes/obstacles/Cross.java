@@ -13,7 +13,7 @@ public class Cross extends Obstacle {
     }
 
     @Override
-    public void doIt(Team animal) { animal.getYourTeam().run(length);
+    public void doIt(Participant animal) { animal.run(length);
     }
 
 

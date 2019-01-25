@@ -20,25 +20,15 @@ public class Application {
                 new Water(7)
         };
 
-        for (Participant participant : participants) {
-            for (Obstacle obstacle : obstacles) {
-                obstacle.doIt(participant);
-                if (!participant.isOnDistance()) {
-                    break;
-                }
-            }
-        }
 
-        System.out.println("Итоги:");
-        for (Participant participant : participants) {
-            System.out.println(participant);
-        }
+
+
        // Team team = new Team();
        // System.out.println(team.YourTeam[0]);/
 
-        Team team = new Team(participants);
+        Team team = new Team("Красавчики",participants);
         Course course = new Course(obstacles);
         course.doIt(team);
-
+        team.ShowResults();
     }
 }

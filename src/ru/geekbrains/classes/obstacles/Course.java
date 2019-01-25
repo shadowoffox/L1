@@ -5,7 +5,7 @@ import ru.geekbrains.classes.Team;
 import ru.geekbrains.classes.animals.Animal;
 
 //3. Добавить класс Course (полоса препятствий), в котором будут находиться массив препятствий и метод, который будет просить команду пройти всю полосу;
-public  class Course extends Obstacle {
+public  class Course {
 
     public Obstacle YourSource[];
 
@@ -14,18 +14,16 @@ public  class Course extends Obstacle {
 
         }
 
-    public Obstacle[] getYourSource() {
-        return YourSource;
-    }
-
-    @Override
     public void doIt(Team team){
-
-        for (Participant t:team.getYourTeam()){
-             for (Obstacle c:getYourSource()){
-
-             }
-         }
+        System.out.println("Команда " + team.YourTeamName + " На рубеже!");
+        for (Participant participant : team.getYourTeam()) {
+            for (Obstacle obstacle : YourSource) {
+                obstacle.doIt(participant);
+                if (!participant.isOnDistance()) {
+                    break;
+                }
+            }
+        }
      }
 }
 
